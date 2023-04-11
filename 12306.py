@@ -78,7 +78,7 @@ web.implicitly_wait(10)
 
 username_input = web.find_element_by_xpath('//*[@id="J-userName"]')
 password_input = web.find_element_by_xpath('//*[@id="J-password"]')
-
+# 这里需要输入你自己的账号密码
 username_input.send_keys("username")
 password_input.send_keys("password")
 
@@ -91,5 +91,5 @@ print(verify_img.location)
 
 span = web.find_element_by_xpath('//*[@id="nc_1_n1z"]')
 ActionChains(web).drag_and_drop_by_offset(span, xoffset=380, yoffset=0).perform()
-web.quit()
+# web.quit()
 # 总体来说 12306的登陆还是比较简单 没什么太大难度
